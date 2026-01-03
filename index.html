@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پیام‌رسان ساده</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- صفحه ورود -->
+        <div class="login-container" id="login-container">
+            <div class="login-form">
+                <h1 class="login-title">پیام‌رسان ساده</h1>
+                <p class="login-subtitle">لطفاً کد و رمز عبور خود را وارد کنید</p>
+                
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="user-code">کد کاربری</label>
+                        <input type="text" id="user-code" placeholder="مثال: USER001" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">رمز عبور</label>
+                        <input type="password" id="password" placeholder="رمز عبور خود را وارد کنید" required>
+                    </div>
+                    
+                    <button type="submit" class="btn" id="login-btn">
+                        <i class="fas fa-sign-in-alt"></i> ورود به پیام‌رسان
+                    </button>
+                </form>
+                
+                <div class="users-list">
+                    <h3>کدهای کاربران موجود:</h3>
+                    <div class="users-grid" id="users-grid">
+                        <!-- کدهای کاربران اینجا نمایش داده می‌شوند -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- بخش اصلی پیام‌رسان -->
+        <div class="messenger-container" id="messenger-container">
+            <!-- هدر -->
+            <div class="header">
+                <div class="user-info">
+                    <div class="avatar" id="current-user-avatar">U</div>
+                    <div>
+                        <h3 id="current-user-name">کاربر</h3>
+                        <p id="current-user-code">کد: USER001</p>
+                    </div>
+                </div>
+                <button class="btn logout-btn" id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i> خروج
+                </button>
+            </div>
+            
+            <!-- محتوای اصلی -->
+            <div class="main-content">
+                <!-- سایدبار مخاطبین -->
+                <div class="contacts-sidebar">
+                    <div class="contacts-header">مخاطبین</div>
+                    <div class="contacts-list" id="contacts-list">
+                        <!-- لیست مخاطبین اینجا نمایش داده می‌شوند -->
+                    </div>
+                </div>
+                
+                <!-- ناحیه چت -->
+                <div class="chat-area">
+                    <div class="chat-header">
+                        <div class="contact-avatar" id="chat-contact-avatar">G</div>
+                        <span id="chat-contact-name">گروه اصلی</span>
+                    </div>
+                    
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- پیام‌ها اینجا نمایش داده می‌شوند -->
+                    </div>
+                    
+                    <div class="chat-input-area">
+                        <div class="chat-input">
+                            <input type="text" id="message-input" placeholder="پیام خود را بنویسید...">
+                        </div>
+                        <label for="file-input" class="file-input-label">
+                            <i class="fas fa-paperclip"></i>
+                        </label>
+                        <input type="file" id="file-input">
+                        <button class="btn btn-success" id="send-btn">
+                            <i class="fas fa-paper-plane"></i> ارسال
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- نوتیفیکیشن -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text">پیام با موفقیت ارسال شد</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
